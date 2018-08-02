@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <ApolloProvider client={client}>
         <div>
-          <h2>My first Apollo app 🚀</h2>
+          <h2>Fetching some 🐶</h2>
         </div>
         <Dogs />
       </ApolloProvider>
