@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
+import { ApolloProvider } from 'react-apollo';
+import ApolloClient from 'apollo-boost';
+import ExchangeRates from './components/ExchangeRates';
+
+const client = new ApolloClient({
+  uri: 'https://w5xlvm3vzz.lp.gql.zone/graphql',
+});
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header>
-          <h1>Welcome to React</h1>
-        </header>
-        <p>
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <ApolloProvider client={client}>
+        <div>
+          <h2>My first Apollo app 🚀</h2>
+        </div>
+        <ExchangeRates />
+      </ApolloProvider>
     );
   }
 }
