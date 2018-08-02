@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { ApolloProvider } from 'react-apollo';
 import ApolloClient from 'apollo-boost';
-import ExchangeRates from './components/ExchangeRates';
+import Dogs from './components/Dogs';
 
 const client = new ApolloClient({
-  uri: 'https://w5xlvm3vzz.lp.gql.zone/graphql',
+  uri: 'https://nx9zvp49q7.lp.gql.zone/graphql',
 });
 
 class App extends Component {
@@ -14,7 +14,7 @@ class App extends Component {
         <div>
           <h2>My first Apollo app 🚀</h2>
         </div>
-        <ExchangeRates />
+        <Dogs />
       </ApolloProvider>
     );
   }
