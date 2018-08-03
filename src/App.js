@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { ApolloProvider } from 'react-apollo';
 import ApolloClient from 'apollo-boost';
-import Dogs from './components/Dogs';
+import AddTodo from './components/AddTodo';
+import Todos from './components/Todos';
 
 const client = new ApolloClient({
-  uri: 'https://nx9zvp49q7.lp.gql.zone/graphql',
+  uri: 'https://8v9r9kpn7q.lp.gql.zone/graphql',
 });
 
 class App extends Component {
@@ -12,9 +13,10 @@ class App extends Component {
     return (
       <ApolloProvider client={client}>
         <div>
-          <h2>Fetching some 🐶</h2>
+          <h2>Adding some 📝</h2>
         </div>
-        <Dogs />
+        <Todos />
+        <AddTodo />
       </ApolloProvider>
     );
   }
