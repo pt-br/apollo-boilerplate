@@ -21,7 +21,7 @@ class App extends Component {
         <Router>
           <Switch>
             <Route exact path="/" component={Todos} />
-            <Route path="/todos" component={Todos} />
+            <Route path="/apollo-boilerplate" component={Todos} />
             <Route component={NoMatch} />
           </Switch>
         </Router>
