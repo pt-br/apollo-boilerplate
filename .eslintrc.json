@@ -13,6 +13,7 @@
     "arrow-parens": 0,
     "jsx-a11y/accessible-emoji": 0,
     "react/jsx-one-expression-per-line": 0,
-    "no-shadow": 0
+    "no-shadow": 0,
+    "import/no-unresolved": 0
   }
 }

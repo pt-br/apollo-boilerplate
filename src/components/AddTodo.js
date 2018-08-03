@@ -1,24 +1,9 @@
 import React, { Component } from 'react';
-import gql from 'graphql-tag';
 import { Mutation } from 'react-apollo';
+import styled from 'styled-components';
 
-const GET_TODOS = gql`
-  {
-    todos {
-      id
-      type
-    }
-  }
-`;
-
-const ADD_TODO = gql`
-  mutation AddTodo($type: String!) {
-    addTodo(type: $type) {
-      id
-      type
-    }
-  }
-`;
+import { GET_TODOS } from 'apollo/queries';
+import { ADD_TODO } from 'apollo/mutations';
 
 class AddTodo extends Component {
   render() {
