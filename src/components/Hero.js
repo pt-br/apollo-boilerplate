@@ -22,7 +22,6 @@ const Logo = styled.div`
 
 const Text = styled.div`
   padding-top: 10px;
-  color: #dad4d4;
   font-size: 20px;
   font-family: monospace;
 `;
