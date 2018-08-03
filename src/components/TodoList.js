@@ -69,7 +69,6 @@ class TodoList extends Component {
                       }}
                     >
                       <Input
-                        autoFocus
                         innerRef={Input => {
                           this.todoInput = Input;
                         }}
