@@ -7,15 +7,17 @@ import Hero from 'components/Hero';
 import NoMatch from 'views/NoMatch';
 import Todos from 'views/Todos';
 
+const graphqlEndpoint = 'https://8v9r9kpn7q.lp.gql.zone/graphql';
+
 const client = new ApolloClient({
-  uri: 'https://8v9r9kpn7q.lp.gql.zone/graphql',
+  uri: graphqlEndpoint,
 });
 
 class App extends Component {
   render() {
     return (
       <ApolloProvider client={client}>
-        <Hero />
+        <Hero graphqlEndpoint={graphqlEndpoint} />
         <Router>
           <Switch>
             <Route exact path="/" component={Todos} />

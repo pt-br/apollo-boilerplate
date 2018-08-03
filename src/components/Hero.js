@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import ApolloLogo from 'images/apolloLogo.png';
@@ -26,11 +27,38 @@ const Text = styled.div`
   font-family: monospace;
 `;
 
-const Hero = () => (
-  <Wrapper>
-    <Logo />
-    <Text>A simple Apollo boilerplate</Text>
-  </Wrapper>
-);
+const GraphQLEndpointTextWrapper = Text.extend`
+  padding-top: 20px;
+  font-size: 14px;
+`;
+
+const GraphQLEndpointText = styled.span`
+  color: #ff0880;
+`;
+
+class Hero extends Component {
+  render() {
+    const { graphqlEndpoint } = this.props;
+
+    return (
+      <Wrapper>
+        <Logo />
+        <Text>A simple Apollo boilerplate</Text>
+        <GraphQLEndpointTextWrapper>
+          Current GraphQL server endpoint:{' '}
+          <GraphQLEndpointText>{graphqlEndpoint}</GraphQLEndpointText>
+        </GraphQLEndpointTextWrapper>
+      </Wrapper>
+    );
+  }
+}
+
+Hero.defaultProps = {
+  graphqlEndpoint: 'None',
+};
+
+Hero.propTypes = {
+  graphqlEndpoint: PropTypes.string,
+};
 
 export default Hero;
